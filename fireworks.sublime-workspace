@@ -1,0 +1,358 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"requ",
+				"requestId"
+			],
+			[
+				"on",
+				"onended"
+			],
+			[
+				"stop",
+				"stopAll"
+			],
+			[
+				"lastTi",
+				"lastTileY"
+			],
+			[
+				"tile",
+				"tileY"
+			],
+			[
+				"lastT",
+				"lastTileX"
+			],
+			[
+				"pla",
+				"player"
+			],
+			[
+				"sound",
+				"soundTriggers"
+			],
+			[
+				"collis",
+				"collisionY"
+			],
+			[
+				"collisi",
+				"collisionX"
+			],
+			[
+				"colli",
+				"collisionY"
+			],
+			[
+				"coll",
+				"collisionY"
+			],
+			[
+				"col",
+				"collision"
+			],
+			[
+				"worl",
+				"worldY"
+			],
+			[
+				"play",
+				"playing"
+			],
+			[
+				"ti",
+				"tileSize"
+			],
+			[
+				"player",
+				"playerPos"
+			],
+			[
+				"create",
+				"createGain"
+			],
+			[
+				"reque",
+				"requestAnimationFrame"
+			],
+			[
+				"categor",
+				"categoryIndex"
+			],
+			[
+				"librar",
+				"library2"
+			],
+			[
+				"creae",
+				"createMenuDOM"
+			],
+			[
+				"crea",
+				"createDOM"
+			],
+			[
+				"data",
+				"data-product-id"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove	",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"ftp",
+				"FTPSync: Browse"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jaakko/Projektit/webgl-lessons/lesson02/index.html",
+		"/Users/jaakko/Projektit/webgl-lessons/lesson01/index.html",
+		"/Users/jaakko/Documents/joululaulut.txt",
+		"/Users/jaakko/Projektit/DOF/tunnit-20131121-20131220-Jaakko-Rinta-Filppula.txt",
+		"/Users/jaakko/Downloads/#YOGO-Platform/run.sh",
+		"/Users/jaakko/Projektit/ld28-release/index.html",
+		"/Users/jaakko/Projektit/ld28-release/js/sound-source.js",
+		"/Users/jaakko/Projektit/ld28-release/js/sound-manager.js",
+		"/Users/jaakko/Projektit/ld28-release/js/map.js",
+		"/Users/jaakko/Projektit/ld28-release/js/camera.js",
+		"/Users/jaakko/Projektit/ld28-release/js/app.js",
+		"/Users/jaakko/Projektit/ld28-release/js/AudioContext.js",
+		"/Users/jaakko/Downloads/dungeonwish/run.bat",
+		"/Users/jaakko/Projektit/ld28/index.html",
+		"/Users/jaakko/Projektit/ld28/css/main.css",
+		"/Users/jaakko/Projektit/ld28/js/sound-source.js",
+		"/Users/jaakko/Projektit/ld28/js/map.js",
+		"/Users/jaakko/Projektit/ld28/js/sound-manager.js",
+		"/Users/jaakko/Projektit/ld28/data/sounds.json",
+		"/Users/jaakko/Projektit/ld28/data/map.json",
+		"/Users/jaakko/Projektit/ld28/js/app.js",
+		"/Users/jaakko/Projektit/ld28/data/map.csv",
+		"/Users/jaakko/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/jaakko/Projektit/ld28/js/camera.js",
+		"/Users/jaakko/Projektit/DOF/ohjelma_502/ohjelma_502/materiaalit/kirjasto2.json",
+		"/Users/jaakko/Projektit/DOF/ohjelma_502/ohjelma_502/materiaalit/kirjasto.json",
+		"/Users/jaakko/Projektit/DOF/ohjelma_502/ohjelma_502/material-library.js",
+		"/Users/jaakko/Projektit/DOF/ohjelma_502/ohjelma_502/o502_painikkeet.js",
+		"/Users/jaakko/Projektit/DOF/ohjelma_502/ohjelma_502/material-library.css",
+		"/Users/jaakko/Projektit/DOF/ohjelma_502/ohjelma_502_input.php",
+		"/Users/jaakko/Projektit/DOF/tunnit.txt",
+		"/Users/jaakko/Projektit/DOF/ohjelma_502/ohjelma_502/o502_tyyli.css",
+		"/Users/jaakko/Projektit/DOF/ohjelma_502/ftpsync.settings",
+		"/Users/jaakko/Downloads/solarized-master/osx-terminal.app-colors-solarized/xterm-256color/README.md",
+		"/Users/jaakko/Projektit/DOF/ohjelma_502/material-library.js",
+		"/Users/jaakko/Projektit/DOF/ohjelma_502/o502_painikkeet.js",
+		"/Users/jaakko/Projektit/ .txt",
+		"/Users/jaakko/Projektit/tunnit.txt",
+		"/Users/jaakko/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/jaakko/Library/Application Support/Sublime Text 3/Packages/BufferScroll/BufferScroll.sublime-settings",
+		"/Users/jaakko/Library/Application Support/Sublime Text 3/Packages/User/BufferScroll.sublime-settings"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"i",
+			"finaly",
+			"here",
+			"clang",
+			"false",
+			"test",
+			";",
+			"(^.*)",
+			"(\\A.*)",
+			";",
+			"true",
+			"false",
+			"soundTriggers",
+			"(^.*)",
+			"(.*)",
+			";",
+			"2",
+			"true",
+			"sound",
+			"onclick",
+			"this",
+			");\n",
+			"mainVolume",
+			"triangle",
+			"sawtooth",
+			"18000",
+			"ctx",
+			"Tulokset",
+			"tuloks"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			",",
+			"[$1],",
+			",",
+			"[$1],",
+			"[$1]",
+			"\\[$1\\]",
+			"$1",
+			"[$1]",
+			","
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "fireworks.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
