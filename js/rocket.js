@@ -1,5 +1,5 @@
 (function() {
-	var Rocket = function(x, y, speed, lifetime, particleSystem) {
+	var Rocket = function(x, y, speed, lifetime, particleSystem, r, g, b) {
 		this.particleSystem = particleSystem;
 
 		this.pos = new Vector(x, y, -1);
@@ -8,6 +8,10 @@
 		this.lifetime = lifetime;
 		this.created = Date.now();
 		this.alive = true;
+
+		this.r = r ? r : false;
+		this.g = g ? g : false;
+		this.b = b ? b : false;
 
 		this.sparks = new ParticleEmitter(x, y, 10, 2, -1, null, this.vel.clone().reverse(), {
 			lifetime: 1000,
@@ -59,9 +63,9 @@
 				minSize: 1.0,
 				maxSize: 3.0,
 
-				minR: 0.0,
-				minG: 0.0,
-				minB: 0.0,
+				minR: this.r ? 1.0 : 0,
+				minG: this.g ? 1.0 : 0,
+				minB: this.b ? 1.0 : 0,
 
 				maxR: 1.0,
 				maxG: 1.0,

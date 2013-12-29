@@ -148,7 +148,7 @@
 		rocketInterval = 1000,
 		lastRocket = 0;
 
-	var lastT, dt;
+	var lastT = 0, dt;
 	function run(t) {
 		dt = t - lastT;
 		lastT = t;
@@ -156,15 +156,18 @@
 		window.requestAnimationFrame(run);
 
 		if (Date.now() > lastRocket + rocketInterval) {
-			rockets.push(new Rocket(0, -3, 1, 3000, particleSystem));
+			var r = Math.random() > 0.5 ? true : false,
+				g = Math.random() > 0.5 ? true : false,
+				b = Math.random() > 0.5 ? true : false;
+			rockets.push(new Rocket(0, -3, 1, 3000 + 2000 * Math.random(), particleSystem, r, g, b));
 
 			lastRocket = Date.now();
 		}
 		for (var i = 0; i < rockets.length; i++) {
-			rockets[i].update(16);
+			rockets[i].update(dt);
 		}
 
-		particleSystem.update(16, ctx);
+		particleSystem.update(dt, ctx);
 		gl.bindBuffer(gl.ARRAY_BUFFER, particleVertexPosBuffer);
 		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(particleSystem.vertices), gl.DYNAMIC_DRAW);
 
