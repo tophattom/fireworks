@@ -66,9 +66,14 @@
 		if (Date.now() > this.created + this.lifetime) {
 			this.sparks.alive = false;
 
-			var explosion = new ParticleEmitter(this.pos.i, this.pos.j, 0, 100, 1, null, null, {
+			var amount = 10 + 190 * Math.random();
+
+			var explosion = new ParticleEmitter(this.pos.i, this.pos.j, 0, amount, 1, null, null, {
 				lifetime: 400,
 				lifeScatter: 300,
+
+				power: 2,
+				powerScatter: 3 * Math.random(),
 
 				minSize: 1.0,
 				maxSize: 3.0,
