@@ -1,5 +1,5 @@
 (function() {
-	var Rocket = function(x, y, speed, lifetime, particleSystem, r, g, b) {
+	var Rocket = function(x, y, speed, lifetime, particleSystem, r, g, b, audioCtx, launchBuffer, explosionBuffer) {
 		this.particleSystem = particleSystem;
 
 		this.pos = new Vector(x, y, -1);
@@ -38,6 +38,21 @@
 
 
 		particleSystem.addEmitter(this.sparks);
+
+		var launchSound = audioCtx.createBufferSource();
+		launchSound.buffer = launchBuffer;
+		launchSound.playbackRate.value = 0.3 + 0.9 * Math.random();
+
+		var launchVolume = audioCtx.createGain();
+		launchVolume.gain.value = 0.05 + 0.05 * Math.random();
+
+		launchSound.connect(launchVolume);
+		launchVolume.connect(audioCtx.mainVolume);
+
+		launchSound.start(0);
+
+		this.audioCtx = audioCtx;
+		this.explosionBuffer = explosionBuffer;
 	};
 
 	Rocket.prototype.move = function(vel) {
@@ -89,6 +104,18 @@
 			this.particleSystem.addEmitter(explosion);
 
 			this.alive = false;
+
+			var explosionSound = this.audioCtx.createBufferSource();
+			explosionSound.buffer = this.explosionBuffer;
+			explosionSound.playbackRate.value = 0.2 + 0.2 * Math.random();
+
+			var explosionVolume = this.audioCtx.createGain();
+			explosionVolume.gain.value = Math.sqrt(amount) / 10 - 0.15;
+
+			explosionSound.connect(explosionVolume);
+			explosionVolume.connect(this.audioCtx.mainVolume);
+
+			explosionSound.start(0);
 		}
 	};
 
