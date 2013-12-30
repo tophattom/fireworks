@@ -5,6 +5,8 @@
 		this.pos = new Vector(x, y, -1);
 		this.vel = new Vector(0, speed, 0);
 
+		this.lastTurn = Math.random() < 0.5 ? -1 : 1;
+
 		this.lifetime = lifetime;
 		this.created = Date.now();
 		this.alive = true;
@@ -48,16 +50,24 @@
 			return;
 		}
 
-		this.vel.rotate(-0.1 + 0.2 * Math.random());
+		var turn = -this.lastTurn * 0.1 + -this.lastTurn * 0.2 * Math.random();
+		this.vel.rotate(turn);
+
+		this.lastTurn = turn < 0 ? -1 : 1;
+		if (this.vel.j < 0) {
+			this.vel.j = this.vel.j * -1;
+		}
 
 		this.pos.add(this.vel.clone().mul(dt / 1000));
+
 		this.sparks.pos = this.pos.clone();
+		this.sparks.direction = this.vel.clone().reverse().normalize();
 
 		if (Date.now() > this.created + this.lifetime) {
 			this.sparks.alive = false;
 
 			var explosion = new ParticleEmitter(this.pos.i, this.pos.j, 0, 100, 1, null, null, {
-				lifetime: 500,
+				lifetime: 400,
 				lifeScatter: 300,
 
 				minSize: 1.0,

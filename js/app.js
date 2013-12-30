@@ -156,10 +156,19 @@
 		window.requestAnimationFrame(run);
 
 		if (Date.now() > lastRocket + rocketInterval) {
-			var r = Math.random() > 0.5 ? true : false,
+			var x = -2 + 4 * Math.random(),
+
+				r = Math.random() > 0.5 ? true : false,
 				g = Math.random() > 0.5 ? true : false,
-				b = Math.random() > 0.5 ? true : false;
-			rockets.push(new Rocket(0, -3, 1, 3000 + 2000 * Math.random(), particleSystem, r, g, b));
+				b = Math.random() > 0.5 ? true : false,
+
+				speed = 0.7 + 0.7 * Math.random(),
+
+				life = 3000 + 2000 * Math.random();
+
+			rockets.push(new Rocket(x, -3, speed, life, particleSystem, r, g, b));
+
+			rocketInterval = 600 + 800 * Math.random();
 
 			lastRocket = Date.now();
 		}
