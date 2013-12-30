@@ -1,6 +1,17 @@
 (function() {
 	"use strict";
 
+
+	var audioCtx = new AudioContext();
+		audioCtx.mainVolume = audioCtx.createGain();
+
+	audioCtx.mainVolume.connect(audioCtx.destination);
+
+
+	var launchSoundBuffer,
+		explosionSoundBuffer;
+
+
 	var canvas = document.getElementById("fireworkCanvas"),
 		ctx,
 
@@ -166,7 +177,7 @@
 
 				life = 3000 + 2000 * Math.random();
 
-			rockets.push(new Rocket(x, -3, speed, life, particleSystem, r, g, b));
+			rockets.push(new Rocket(x, -3, speed, life, particleSystem, r, g, b, audioCtx, launchSoundBuffer, explosionSoundBuffer));
 
 			rocketInterval = 600 + 800 * Math.random();
 
@@ -195,6 +206,35 @@
 			return elem.alive;
 		});
 	}
+
+
+	function loadSoundBuffers() {
+		var req = new XMLHttpRequest();
+		req.open("GET", "sound/launch.wav", true);
+		req.responseType = "arraybuffer";
+
+		req.onload = function(e) {
+			launchSoundBuffer = audioCtx.createBuffer(this.response, false);
+		};
+
+		req.send();
+
+
+		var req2 = new XMLHttpRequest();
+		req2.open("GET", "sound/explosion.wav", true);
+		req2.responseType = "arraybuffer";
+
+		req2.onload = function(e) {
+			explosionSoundBuffer = audioCtx.createBuffer(this.response, false);
+		};
+
+		req2.send();
+	}
+
+
+
+	loadSoundBuffers();
+
 
 	window.setInterval(flushRockets, 1000);
 
