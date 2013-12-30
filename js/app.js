@@ -191,7 +191,7 @@
 
 
 	function flushRockets() {
-		this.rockets = this.rockets.filter(function(elem) {
+		rockets = rockets.filter(function(elem) {
 			return elem.alive;
 		});
 	}
